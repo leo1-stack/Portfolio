@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métiers de l'informatique</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            width: 100%;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            height: 100%;
+        }
+        .sidebar {
+            background: #34495e;
+            color: #fff;
+            width: 220px;
+            min-width: 160px;
+            max-width: 260px;
+            padding: 30px 10px;
+            box-sizing: border-box;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        .sidebar a:hover {
+            color: #1abc9c;
+        }
+        .content {
+            flex: 1;
+            padding: 40px;
+            background: #ecf0f1;
+            min-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> Métiers de l'informatique</div>
+        <div class="main">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#dev" onclick="showJob('dev')">Développeur</a></li>
+                    <li><a href="#admin" onclick="showJob('admin')">Administrateur Systèmes</a></li>
+                    <li><a href="#data" onclick="showJob('data')">Data Scientist</a></li>
+                    <li><a href="#cyber" onclick="showJob('cyber')">Expert Cybersécurité</a></li>
+                </ul>
+            </nav>
+            <div class="content" id="f3-content">
+                <h2>Bienvenue !</h2>
+                <p>Sélectionnez un métier à gauche pour voir sa présentation.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const jobs = {
+            dev: {
+                title: "Développeur",
+                desc: "Le développeur conçoit, écrit et maintient des programmes informatiques. Il peut travailler sur des applications web, mobiles, logicielles, etc. Il maîtrise plusieurs langages de programmation et travaille souvent en équipe."
+            Image:},
+            admin: {
+                title: "Administrateur Systèmes",
+                desc: "L'administrateur systèmes gère et maintient les serveurs, réseaux et infrastructures informatiques d'une organisation. Il veille à la sécurité, la disponibilité et la performance des systèmes."
+            },
+            data: {
+                title: "Data Scientist",
+                desc: "Le data scientist analyse de grandes quantités de données pour en extraire des informations utiles. Il utilise des outils statistiques, du machine learning et des bases de données pour aider à la prise de décision."
+            },
+            cyber: {
+                title: "Expert Cybersécurité",
+                desc: "L'expert cybersécurité protège les systèmes informatiques contre les attaques et les intrusions. Il met en place des politiques de sécurité, surveille les menaces et intervient en cas d'incident."
+            }
+        };
+        function showJob(key) {
+            const job = jobs[key];
+            const content = document.getElementById('f3-content');
+            content.innerHTML = `<h2>${job.title}</h2><p>${job.desc}</p>`;
+        }
+    </script>
+</body>
+</html>
