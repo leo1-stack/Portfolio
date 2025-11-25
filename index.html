@@ -1,30 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio Numérique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .card-tag.mission {
+            background: #f6ad55;
+        }
+
+        .card-tag.course {
+            background: #48bb78;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 24px;
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Mon Portfolio Numérique</h1>
+    <div class="container">
+        <header>
+            <h1>🎨 Mon Portfolio Numérique</h1>
+            <p class="subtitle">Découvrez tous mes travaux et projets</p>
+        </header>
 
-    <a href="tp1/index.html">TP1</a><br>
-    <a href="tp2/index.html">TP2</a><br>
-    <a href="tp3/index.html">TP3</a><br>
-    <a href="tp4/index.html">TP4</a><br>
-    <a href="tp5/index.html">TP5</a><br>
-    <a href="tp6/index.html">TP6</a><br>
-    <a href="Mission 3 excercice 1/Mission 3.html">Mission 3 excercice 1</a><br>
-    <a href="Mission 3 excercice 2/index.html">Mission 3 excercice 2</a><br>
-    <a href="tp7/index.html">TP7</a><br>
-    <a href="tp8/AP - Les environnements d’exploitation leo rioual.pdf">TP8</a><br>
-    <a href="tp9/index.html">TP9</a><br>
-    <a href="tp10/index.html">TP10</a><br>
-    <a href="cour bootstrap 1.2/index.html">Cours Bootstrap</a><br>
-    <a href="tp11/index.html">TP11</a><br>
-    <a href="tp12/tp12.html">TP12</a><br>
-    <a href="tp13/tp13.html">TP13</a><br>
+        <!-- Travaux Pratiques -->
+        <h2 class="section-title">📚 Travaux Pratiques</h2>
+        <div class="grid">
+            <a href="tp1/index.html" class="card">
+                <div class="card-icon">1️⃣</div>
+                <div class="card-title">TP1</div>
+                <div class="card-description">Premier travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
 
+            <a href="tp2/index.html" class="card">
+                <div class="card-icon">2️⃣</div>
+                <div class="card-title">TP2</div>
+                <div class="card-description">Deuxième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp3/index.html" class="card">
+                <div class="card-icon">3️⃣</div>
+                <div class="card-title">TP3</div>
+                <div class="card-description">Troisième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp4/index.html" class="card">
+                <div class="card-icon">4️⃣</div>
+                <div class="card-title">TP4</div>
+                <div class="card-description">Quatrième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp5/index.html" class="card">
+                <div class="card-icon">5️⃣</div>
+                <div class="card-title">TP5</div>
+                <div class="card-description">Cinquième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp6/index.html" class="card">
+                <div class="card-icon">6️⃣</div>
+                <div class="card-title">TP6</div>
+                <div class="card-description">Sixième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp7/index.html" class="card">
+                <div class="card-icon">7️⃣</div>
+                <div class="card-title">TP7</div>
+                <div class="card-description">Septième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="C:\Users\leo1r\OneDrive\Bureau\Portfolio\tp8\AP - Les environnements d’exploitation leo rioual.pdf" class="card">
+                <div class="card-icon">8️⃣</div>
+                <div class="card-title">TP8</div>
+                <div class="card-description">Les environnements d'exploitation</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp9/index.html" class="card">
+                <div class="card-icon">9️⃣</div>
+                <div class="card-title">TP9</div>
+                <div class="card-description">Neuvième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp10/index.html" class="card">
+                <div class="card-icon">🔟</div>
+                <div class="card-title">TP10</div>
+                <div class="card-description">Dixième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp11/index.html" class="card">
+                <div class="card-icon">1️⃣1️⃣</div>
+                <div class="card-title">TP11</div>
+                <div class="card-description">Onzième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp12/tp12.html" class="card">
+                <div class="card-icon">1️⃣2️⃣</div>
+                <div class="card-title">TP12</div>
+                <div class="card-description">Douzième travail pratique</div>
+                <span class="card-tag">TP</span>
+            </a>
+
+            <a href="tp13/tp13.html" class="card">
+                <div class="card-icon">1️⃣3️⃣</div>
+                <div class="card-title">TP13</div>
+                <div class="card-description">Treizième travail pratique avec BD</div>
+                <span class="card-tag">TP</span>
+            </a>
+        </div>
+
+        <!-- Missions -->
+        <h2 class="section-title">🎯 Missions</h2>
+        <div class="grid">
+            <a href="Mission 3 excercice 1/Mission 3.html" class="card">
+                <div class="card-icon">🎯</div>
+                <div class="card-title">Mission 3 - Exercice 1</div>
+                <div class="card-description">Premier exercice de mission</div>
+                <span class="card-tag mission">Mission</span>
+            </a>
+
+            <a href="Mission 3 excercice 2/index.html" class="card">
+                <div class="card-icon">🎯</div>
+                <div class="card-title">Mission 3 - Exercice 2</div>
+                <div class="card-description">Deuxième exercice de mission</div>
+                <span class="card-tag mission">Mission</span>
+            </a>
+
+            <a href="Mission 4/index.html" class="card">
+                <div class="card-icon">🏆</div>
+                <div class="card-title">Mission 4</div>
+                <div class="card-description">Certificats et accomplissements</div>
+                <span class="card-tag mission">Mission</span>
+            </a>
+        </div>
+
+        <!-- Cours -->
+        <h2 class="section-title">🎓 Cours et Ressources</h2>
+        <div class="grid">
+            <a href="cour bootstrap 1.2/index.html" class="card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Cours Bootstrap</div>
+                <div class="card-description">Framework Bootstrap 1.2</div>
+                <span class="card-tag course">Cours</span>
+            </a>
+
+            <a href="1_js/index.html" class="card">
+                <div class="card-icon">⚙️</div>
+                <div class="card-title">JavaScript - Formulaire</div>
+                <div class="card-description">Formulaire avec validation</div>
+                <span class="card-tag course">JavaScript</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Mon Portfolio - Tous les droits réservés</p>
+        </div>
+    </div>
 </body>
-
 </html>

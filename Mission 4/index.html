@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 4 - Certificats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        .cert-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 24px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .cert-card:hover {
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+            transform: translateY(-6px);
+            border-color: #667eea;
+        }
+        .cert-icon {
+            font-size: 64px;
+            margin: 0 auto;
+        }
+        .cert-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        .cert-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-view {
+            background: #667eea;
+            color: white;
+        }
+        .btn-view:hover {
+            background: #5568d3;
+            transform: scale(1.02);
+        }
+        .btn-download {
+            background: #48bb78;
+            color: white;
+        }
+        .btn-download:hover {
+            background: #38a169;
+            transform: scale(1.02);
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            transition: 0.2s ease;
+        }
+        .home-link:hover {
+            background: #5568d3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Mission 4 - Certificats</h1>
+        <p class="subtitle">Accédez à vos certificats en ligne ou téléchargez-les</p>
+
+        <div class="certificates-grid">
+            <!-- Certificat 1 -->
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <div class="cert-title">Certificat 1</div>
+                <div class="cert-buttons">
+                    <a href="Certificat_1.pdf" target="_blank" class="btn btn-view">Voir</a>
+                    <a href="Certificat_1.pdf" download class="btn btn-download">Télécharger</a>
+                </div>
+            </div>
+
+            <!-- Certificat 2 -->
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <div class="cert-title">Certificat 2</div>
+                <div class="cert-buttons">
+                    <a href="Certificat_2.pdf" target="_blank" class="btn btn-view">Voir</a>
+                    <a href="Certificat_2.pdf" download class="btn btn-download">Télécharger</a>
+                </div>
+            </div>
+
+            <!-- Certificat 3 -->
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <div class="cert-title">Certificat 3</div>
+                <div class="cert-buttons">
+                    <a href="Certificat_3.pdf" target="_blank" class="btn btn-view">Voir</a>
+                    <a href="Certificat_3.pdf" download class="btn btn-download">Télécharger</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="../index.html" class="home-link">← Retour à l'accueil</a>
+    </div>
+</body>
+</html>
